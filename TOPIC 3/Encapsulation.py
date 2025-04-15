@@ -1,8 +1,8 @@
 class Person:
     def __init__(self, nama, usia, alamat):
-        self.__nama = nama       # Private
-        self.__usia = usia       # Private
-        self.alamat = alamat     # Public
+        self.__nama = nama       # private property
+        self.__usia = usia       # private property
+        self.alamat = alamat     # public property
 
     # Getter untuk nama
     def get_nama(self):
@@ -35,16 +35,20 @@ miya.perkenalan()
 amel.perkenalan()
 mila.ulang_tahun()
 
-# Objek baru dan penggunaan getter & setter
+# Membuat objek baru
 rara = Person("Rara", 18, "Surakarta")
+
+# Akses awal menggunakan getter
 print("\nSebelum diubah:")
+print("Nama:", rara.get_nama())
+print("Usia:", rara.get_usia())
 rara.perkenalan()
 
-# Mengakses dan mengubah variabel private
+# Mengubah nilai property private menggunakan setter
 rara.set_nama("Anindita Azzahra Setiahati")
 rara.set_usia(19)
 
 print("\nSetelah diubah menggunakan setter:")
-print(f"Nama: {rara.get_nama()}")
-print(f"Usia: {rara.get_usia()}")
+print("Nama:", rara.get_nama())
+print("Usia:", rara.get_usia())
 rara.perkenalan()
